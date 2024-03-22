@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edTen"
+        android:textSize="15dp"
+        android:hint="Họ và tên"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:textSize="15dp"
+        android:hint="Tác giả"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/edTime"
+        android:textSize="15dp"
+        android:hint="Thời gian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cham biem"
+        android:id="@+id/cb1"
+        />
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Su that"
+        android:id="@+id/cb2"
+        />
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Phe phan"
+        android:id="@+id/cb3"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btAdd"
+            android:text="Add"
+            android:textSize="14dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btUpdate"
+            android:text="Update"
+            android:textSize="14dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btSearch"
+        android:background="@drawable/search"
+        app:iconifiedByDefault="true"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

@@ -1,0 +1,87 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:src="@drawable/img"
+                android:layout_width="150dp"
+                android:layout_height="150dp" />
+
+            <CheckBox
+                android:id="@+id/ck1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Android" />
+
+            <CheckBox
+                android:id="@+id/ck2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ios" />
+
+            <CheckBox
+                android:id="@+id/ck3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Window Mobile" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/gnam"
+                    android:text="Nam"
+                    android:checked="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:id="@+id/gnu"
+                    android:text="Nu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+
+            <RatingBar
+                android:id="@+id/rating"
+                android:numStars="4"
+                android:rating="1"
+                android:stepSize="0.5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/sp1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/sp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btht"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SUBMMIT" />
+            <TextView
+                android:id="@+id/kq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+</ScrollView>

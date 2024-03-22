@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string-array name="country">
+        <item>Viet Nam</item>
+        <item>Lao</item>
+        <item>Nhat Ban</item>
+        <item>Trung Quoc</item>
+    </string-array>
+    <string-array name="pheptinh">
+        <item>+</item>
+        <item>-</item>
+        <item>*</item>
+        <item>/</item>
+    </string-array>
+</resources>

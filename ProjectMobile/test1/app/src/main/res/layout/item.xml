@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="#C9C8CC">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="8">
+        <ImageView
+            android:id="@+id/img"
+            android:layout_weight="1"
+            android:layout_marginTop="40dp"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:src="@drawable/male"/>
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTen"
+            android:layout_weight="4"
+            android:textStyle="bold"
+            android:text="Nguyen Cong Phuong"
+            android:layout_gravity="center"
+            android:textSize="15dp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            >
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cbhauve"
+                android:text="Hậu vệ"
+                android:enabled="false"
+                />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cbtienve"
+                android:text="Tiền vệ"
+                android:enabled="false"
+                />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cbtiendao"
+                android:text="Tiền đạo"
+                android:enabled="false"
+                />
+        </LinearLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btremove"
+            android:text="REMOVE"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+    <TextView
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="150dp"
+        />
+
+</androidx.cardview.widget.CardView>

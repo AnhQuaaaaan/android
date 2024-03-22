@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F6F5F5">
+
+    <EditText
+        android:id="@+id/et1"
+        android:layout_width="900px"
+        android:layout_height="130px"
+        android:alpha="0.5"
+        android:background="@drawable/border"
+        android:hint="Tên người dùng"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="300px"
+        />
+
+    <EditText
+        android:id="@+id/et2"
+        app:layout_constraintTop_toBottomOf="@+id/et1"
+        app:layout_constraintLeft_toLeftOf="@+id/et1"
+        android:layout_marginTop="30px"
+        android:layout_width="900px"
+        android:layout_height="130px"
+        android:background="@drawable/border"
+        android:hint="Email"
+        android:alpha="0.5"/>
+
+    <EditText
+        android:id="@+id/et3"
+        android:layout_width="900px"
+        android:layout_height="130px"
+        android:alpha="0.5"
+        app:layout_constraintTop_toBottomOf="@+id/et2"
+        app:layout_constraintLeft_toLeftOf="@+id/et1"
+        android:layout_marginTop="30px"
+        android:background="@drawable/border"
+        android:hint="Mật khẩu"
+
+        />
+
+    <EditText
+        android:id="@+id/et4"
+        android:layout_width="900px"
+        android:layout_height="130px"
+        android:alpha="0.5"
+        android:background="@drawable/border"
+        android:hint="Nhập lại mật khẩu"
+        app:layout_constraintTop_toBottomOf="@+id/et3"
+        app:layout_constraintLeft_toLeftOf="@+id/et1"
+        android:layout_marginTop="30px"
+
+        />
+
+    <Button
+        android:id="@+id/bt1"
+        android:layout_width="900px"
+        android:layout_height="100px"
+        android:background="@drawable/bt_background"
+        android:text="Tạo tài khoản"
+        app:layout_constraintTop_toBottomOf="@+id/et4"
+        app:layout_constraintLeft_toLeftOf="@+id/et1"
+        android:layout_marginTop="100px"
+        />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quay về trang đăng nhập"
+        app:layout_constraintTop_toBottomOf="@+id/bt1"
+        app:layout_constraintLeft_toLeftOf="@+id/et1"
+        android:layout_marginTop="50px"
+        android:layout_marginLeft="300px"
+        />
+</android.support.constraint.ConstraintLayout>
