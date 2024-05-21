@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardBackgroundColor="#C9C8CC">
+    app:cardBackgroundColor="#FBE834">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,21 +38,21 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/cbhauve"
                 android:text="Hậu vệ"
-                android:enabled="false"
+                android:textStyle="bold"
                 />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/cbtienve"
                 android:text="Tiền vệ"
-                android:enabled="false"
+                android:textStyle="bold"
                 />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/cbtiendao"
                 android:text="Tiền đạo"
-                android:enabled="false"
+                android:textStyle="bold"
                 />
         </LinearLayout>
         <Button
@@ -61,6 +61,7 @@
             android:id="@+id/btremove"
             android:text="REMOVE"
             android:layout_gravity="center"
+            android:textStyle="bold"
             />
     </LinearLayout>
     <TextView

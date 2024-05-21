@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#C1EDE9"
+    android:layout_height="match_parent">
+
+    <SearchView
+        android:id="@+id/search"
+        android:layout_marginTop="50dp"
+        android:queryHint="Tìm kiếm ở đây"
+        android:iconifiedByDefault="false"
+        android:background="@drawable/background_gradient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:iconifiedByDefault="true"
+        android:id="@+id/reViewSearch"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

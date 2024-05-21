@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mList"
+        android:title="List"
+        android:icon="@drawable/ic_danhsach"
+        />
+    <item
+        android:id="@+id/mInfor"
+        android:title="Infor"
+        android:icon="@drawable/ic_thongtin"
+        />
+    <item
+        android:id="@+id/mSearch"
+        android:title="Statistical"
+        android:icon="@drawable/ic_tk"
+    />
+    <item
+        android:id="@+id/mSearch1"
+        android:title="Search"
+        android:icon="@drawable/ic_search"
+        />
+
+</menu>

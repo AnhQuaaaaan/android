@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CongViecKtra</string>
+    <string-array name="tinhtrang">
+        <item>chưa thực hiện</item>
+        <item>đang thực hiện</item>
+        <item>hoàn thành</item>
+    </string-array>
+</resources>

@@ -28,10 +28,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private RecyclerView recyclerView;
     private CauThuAdapter adapter;
     private EditText edTen,edNgay;
-    private CheckBox cb1,cb2,cb3;
+    private CheckBox cb1,cb2,cb3,scb1,scb2,scb3;
     private RadioGroup radioGroup;
     private RadioButton rg1,rg2;
-    private Button add,update;
+    private Button add,update,btsearch;
     private SearchView searchView;
     private int pcur;
 
@@ -46,7 +46,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         recyclerView.setAdapter(adapter);
         edNgay.setOnClickListener(this);
         adapter.setClickListener(this);
-        searchView.setOnQueryTextListener(this);
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -127,6 +126,69 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
         });
+        btsearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                List<CauThu> filterlist=new ArrayList<>();
+                boolean scb11 = scb1.isChecked();
+                boolean scb21 = scb2.isChecked();
+                boolean scb31 = scb3.isChecked();
+                if (scb11&&!scb21&&!scb31){
+                    for (CauThu c:adapter.getBackup()){
+                        if(c.isHauve()){
+                            filterlist.add(c);
+                        }
+                    }
+                }else if (scb11 && scb21 && !scb31) {
+                    for (CauThu c:adapter.getBackup()){
+                        if(c.isTienve() && c.isHauve()){
+                            filterlist.add(c);
+                        }
+                    }
+                }
+                else if (!scb21 &&scb11&&scb31) {
+                    for (CauThu c:adapter.getBackup()){
+                        if(c.isHauve()&& c.isTiendao()){
+                            filterlist.add(c);
+                        }
+                    }
+                }
+                else if (scb11 && scb21 && scb31) {
+                    for (CauThu c:adapter.getBackup()){
+                        if(c.isTienve() && c.isHauve()&& c.isTiendao()){
+                            filterlist.add(c);
+                        }
+                    }
+                }else if (scb21 &&!scb11&&!scb31) {
+                    for (CauThu c:adapter.getBackup()){
+                        if(c.isTienve()){
+                            filterlist.add(c);
+                        }
+                    }
+                }
+                else if (scb21 && scb31&&!scb11) {
+                    for (CauThu c:adapter.getBackup()){
+                        if(c.isTienve()&&c.isTiendao()){
+                            filterlist.add(c);
+                        }
+                    }
+                }
+                else if (scb31 &&!scb11&&!scb21) {
+                    for (CauThu c:adapter.getBackup()){
+                        if(c.isTiendao()){
+                            filterlist.add(c);
+                        }
+                    }
+                }
+                if(filterlist.isEmpty()){
+                    Toast.makeText(getApplicationContext(), "No data found", Toast.LENGTH_SHORT).show();
+                    for (CauThu c:adapter.getBackup()){
+                        filterlist.add(c);
+                    }
+                }
+                adapter.filterList(filterlist);
+            }
+        });
     }
 
     private void initView() {
@@ -137,9 +199,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         cb1 = findViewById(R.id.cb1);
         cb2 = findViewById(R.id.cb2);
         cb3 = findViewById(R.id.cb3);
+        scb1=findViewById(R.id.scb1);
+        scb2=findViewById(R.id.scb2);
+        scb3=findViewById(R.id.scb3);
+        btsearch=findViewById(R.id.btsearch);
         add = findViewById(R.id.btadd);
         update = findViewById(R.id.btupdate);
-        searchView=findViewById(R.id.search);
         recyclerView = findViewById(R.id.recyclerView);
         radioGroup=findViewById(R.id.rdg);
         update.setEnabled(false);
@@ -210,15 +275,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     private void filter(String s){
         List<CauThu> filterlist=new ArrayList<>();
-        for (CauThu c:adapter.getBackup()){
-            if(c.getTen().toLowerCase().contains(s.toLowerCase())){
-                filterlist.add(c);
+        if(s.equals("hau ve")){
+            for (CauThu c:adapter.getBackup()){
+                if(c.isHauve()){
+                    filterlist.add(c);
+                    Toast.makeText(this, "Tìm thấy", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }
+        else if (s.equals("tien ve")){
+            for (CauThu c:adapter.getBackup()){
+                if(c.isTienve()){
+                    filterlist.add(c);
+                    Toast.makeText(this, "Tìm thấy", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }
+        else if (s.equals("tien dao")){
+            for (CauThu c:adapter.getBackup()){
+                if(c.isTiendao()){
+                    filterlist.add(c);
+                    Toast.makeText(this, "Tìm thấy", Toast.LENGTH_SHORT).show();
+                }
             }
         }
         if(filterlist.isEmpty()){
             Toast.makeText(this, "No data found", Toast.LENGTH_SHORT).show();
-        }else{
-            adapter.filterList(filterlist);
+            for (CauThu c:adapter.getBackup()){
+                filterlist.add(c);
+            }
         }
+        adapter.filterList(filterlist);
     }
 }

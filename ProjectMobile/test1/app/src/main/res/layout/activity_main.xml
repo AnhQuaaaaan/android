@@ -33,7 +33,6 @@
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:textSize="20dp"
         android:text="Giới tính :"/>
     <RadioGroup
@@ -42,45 +41,49 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         >
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/rg1"
-            android:text="Nam"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/rg2"
-            android:text="Nữ"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rg1"
+                android:text="Nam"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rg2"
+                android:text="Nữ"/>
     </RadioGroup>
-    <TextView
-        android:textStyle="bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:textSize="20dp"
-        android:text="Vị trí sở trường :"/>
-    <CheckBox
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hậu vệ"
-        android:textSize="20dp"
-        android:id="@+id/cb1"
-        />
-    <CheckBox
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tiền vệ"
-        android:textSize="20dp"
-        android:id="@+id/cb2"
-        />
-    <CheckBox
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tiền đạo"
-        android:textSize="20dp"
-        android:id="@+id/cb3"
-        />
+        android:orientation="horizontal">
+        <TextView
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:text="Vị trí sở trường :"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:text="Hậu vệ"
+            android:id="@+id/cb1"
+            />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tiền vệ"
+            android:textSize="13dp"
+            android:id="@+id/cb2"
+            />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tiền đạo"
+            android:textSize="13dp"
+            android:id="@+id/cb3"
+            />
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -101,13 +104,54 @@
             android:text="UPDATE"
             />
     </LinearLayout>
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/search"
+<!--    <androidx.appcompat.widget.SearchView-->
+<!--        android:id="@+id/search"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:queryHint="Search View"-->
+<!--        android:layout_gravity="center"-->
+<!--        />-->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:queryHint="Search View"
-        app:iconifiedByDefault="false"
-        />
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tìm kiếm"
+            android:textSize="13dp"
+            android:textStyle="bold" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:text="Hậu vệ"
+            android:id="@+id/scb1"
+            />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tiền vệ"
+            android:textSize="13dp"
+            android:id="@+id/scb2"
+            />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tiền đạo"
+            android:textSize="13dp"
+            android:id="@+id/scb3"
+            />
+        <Button
+            android:layout_marginLeft="10dp"
+            android:id="@+id/btsearch"
+            android:layout_width="95dp"
+            android:layout_height="50dp"
+            android:text="Search"
+            />
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:id="@+id/recyclerView"

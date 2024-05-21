@@ -69,21 +69,27 @@ public class CauThuAdapter extends RecyclerView.Adapter<CauThuAdapter.CauThuView
         holder.tvTen.setText(cauThu.getTen());
         if(cauThu.isHauve()){
             holder.cb1.setChecked(true);
+            holder.cb1.setEnabled(true);
         }
         else{
             holder.cb1.setChecked(false);
+            holder.cb1.setEnabled(false);
         }
         if(cauThu.isTienve()){
             holder.cb2.setChecked(true);
+            holder.cb2.setEnabled(true);
         }
         else{
             holder.cb2.setChecked(false);
+            holder.cb2.setEnabled(false);
         }
         if(cauThu.isTiendao()){
             holder.cb3.setChecked(true);
+            holder.cb3.setEnabled(true);
         }
         else{
             holder.cb3.setChecked(false);
+            holder.cb3.setEnabled(false);
         }
         holder.btRemove.setOnClickListener(new View.OnClickListener() {
             @Override

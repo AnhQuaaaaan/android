@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BTL</string>
+    <string-array name="size">
+        <item>S</item>
+        <item>M</item>
+        <item>L</item>
+        <item>XL</item>
+    </string-array>
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">De3Navi</string>
+    <string-array name="chuyennganh">
+        <item>CNTT</item>
+        <item>ke toan</item>
+        <item>thiet ke do hoa</item>
+        <item>quan tri kinh doanh</item>
+    </string-array>
+</resources>

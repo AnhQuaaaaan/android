@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">10052024</string>
+    <string-array name="noikhoihanh">
+        <item>Ha Noi</item>
+        <item>Da Nang</item>
+        <item>Ho Chi Minh</item>
+        <item>Hue</item>
+    </string-array>
+</resources>

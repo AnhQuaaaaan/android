@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="10dp"
+    android:layout_gravity="center">
+    >
+    <ImageView
+        android:id="@+id/imgOrder"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/img_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvNameOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên sản phẩm"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imgOrder"
+        app:layout_constraintTop_toTopOf="@+id/imgOrder"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/tvSizeOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Size: M"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/tvNameOrder"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameOrder"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvColorOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Màu: Đen"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/tvSizeOrder"
+        app:layout_constraintTop_toBottomOf="@+id/tvSizeOrder"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvPriceOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giá: $100"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/tvColorOrder"
+        app:layout_constraintTop_toBottomOf="@+id/tvColorOrder"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tv5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Số lượng:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/tvPriceOrder"
+        app:layout_constraintTop_toBottomOf="@+id/tvPriceOrder"
+        android:layout_marginTop="16dp" />
+
+    <Spinner
+        android:id="@+id/spSoluongOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toEndOf="@id/tv5"
+        app:layout_constraintTop_toTopOf="@id/tvPriceOrder"
+        android:layout_marginStart="30dp" />
+
+    <Button
+        android:id="@+id/btnorderOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bt_background"
+        android:text="Thêm vào giỏ"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv5" />
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/btnorderOrder"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/tvmota"
+        android:text="Mô tả chi tiết sản phẩm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
